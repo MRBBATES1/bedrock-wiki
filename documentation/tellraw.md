@@ -30,4 +30,14 @@ To insert a line break use \n
 ``` /tellraw @a {"rawtext":[{"translate":"accessibility.downloading.complete"}]}```
 please note you will need to edit each languages files for this to work
 
+Since 1.16.100 new parameters was added to the tellraw command that allows you to inject player names and output scoreboard objectives into the text.
+
+To include a player name; use the 'selector' parameter. The target selectors are ``@a`` ``@s`` ``@p`` 
+
+``` /tellraw @p {"rawtext":[{"text":"OMG...."},{"selector":"@p"},{"text":" is amazing"}]}```
+
+To include a value from a scoreboard; use the 'score' parameter
+
+``` /tellraw @p {"rawtext":[{"text":"OMG...." you are amazing you have a score of "},{"score":{"name":"@p","objective":"Example"}}]}```
+
 ### The titleraw command follows the same theme
